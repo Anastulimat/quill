@@ -2,7 +2,7 @@ import './globals.css'
 import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import {ReactNode} from "react";
-import {classNames} from "@/lib/utils";
+import {cn} from "@/lib/utils";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="light">
-            <body className={classNames('min-h-screen font-sans antialiased grainy', inter.className)}>
+            <body className={cn('min-h-screen font-sans antialiased grainy', inter.className)}>
                 {children}
             </body>
         </html>
